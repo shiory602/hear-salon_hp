@@ -1,5 +1,16 @@
-img {
-  width: 100%;
+.error-message {
+  color: #ed001c;
+  font-size: 13px;
+  margin-bottom: 12px;
+}
+
+.firebase-err-message {
+  font-size: 15px;
+  text-align: center;
+}
+
+.mainSec img, footer img {
+  width: 100vw;
 }
 
 ul {
