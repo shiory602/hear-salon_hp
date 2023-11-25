@@ -1,18 +1,30 @@
-@import "./color";
-
-.error-message {
-  color: $warning;
-  font-size: 13px;
-  margin-bottom: 12px;
+@import "color";
+// @import "base";
+body {
+  font-family: "hiragino-kaku-gothic-pron", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 18px;
+  color: $color_primary;
 }
-.firebase-err-message {
-  font-size: 15px;
-  text-align: center;
+ul {
+  display: flex;
+  list-style-type: none;
 }
 .mainSec img, footer img {
   width: 100vw;
 }
-
-ul {
+header {
+  height: 100vh;
+  background: url(../source/mv1.png) no-repeat left center/cover;
+}
+.menuBar {
+  height: 70px;
+  background-color: #ffffff;
   display: flex;
+  justify-content: space-between;
+}
+main h2 {
+  text-align: center;
+  font-size: 60px;
 }

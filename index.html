@@ -6,10 +6,21 @@
   <title>Belleveux</title>
   <link rel='stylesheet' href='https://unpkg.com/ress/dist/ress.min.css'>
   <link rel="stylesheet" href="./css/style.css">
+  <!-- Adobe font -->
+  <script>
+    (function(d) {
+      var config = {
+        kitId: 'poj1cky',
+        scriptTimeout: 3000,
+        async: true
+      },
+      h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+    })(document);
+  </script>
 </head>
 <body class="topPage">
   <header>
-    <nav>
+    <nav class="menuBar">
       <div class="banner">
         <a href="#"><img src="./source/logo.png" alt="banner"></a>
       </div>
@@ -22,10 +33,6 @@
         <li><a href="#">recruit</a></li>
       </ul>
     </nav>
-    <div class="mainSec">
-      <div class="mainVisualPhoto"><img src="./source/mv3.png" alt="mv"></div>
-      <h1>Belleveux</h1>
-    </div>
     <div class="reserveBtn">
       <a href="#">reservation</a>
     </div>
