@@ -1,5 +1,5 @@
 @import "color";
-// @import "base";
+@import "component";
 body {
   font-family: "hiragino-kaku-gothic-pron", sans-serif;
   font-weight: 300;
@@ -14,15 +14,15 @@ ul {
 .mainSec img, footer img {
   width: 100vw;
 }
-header {
-  height: 100vh;
-  background: url(../source/mv1.png) no-repeat left center/cover;
-}
 .menuBar {
-  height: 70px;
+  height: 60px;
+  padding: 10px 20px;
   background-color: #ffffff;
   display: flex;
   justify-content: space-between;
+}
+header h1 {
+  padding: 15px 0 0 20px;
 }
 main h2 {
   text-align: center;
