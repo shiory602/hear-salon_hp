@@ -9,6 +9,10 @@ body {
 
 a {
   cursor: pointer;
+  transition: all 0.3s ease-in 0s;
+}
+a:hover {
+  color: red;
 }
 
 ul {
