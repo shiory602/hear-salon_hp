@@ -9,10 +9,6 @@ body {
 
 a {
   cursor: pointer;
-  transition: all 0.3s ease-in 0s;
-}
-a:hover {
-  color: red;
 }
 
 ul {
@@ -31,4 +27,34 @@ h2 {
 
 .space {
   margin-bottom: 240px;
+}
+
+.btn {
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 64px;
+  font-size: 24px;
+}
+
+.underline {
+  position: relative;
+}
+.underline::after {
+  position: absolute;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 1px;
+  background: #333333;
+  bottom: -1px;
+  z-index: -1;
+  transform: scale(0, 1);
+  transform-origin: left top;
+  transition: 0.3s;
+}
+.underline:hover {
+  color: rgb(216, 157, 47);
+}
+.underline:hover::after {
+  transform: scale(1, 1);
 }/*# sourceMappingURL=base.css.map */

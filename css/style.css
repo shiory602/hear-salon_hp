@@ -1,4 +1,8 @@
 @charset "UTF-8";
+* {
+  -webkit-appearance: none; /*webkit系ブラウザのデフォルトスタイル*/
+}
+
 html, body, div, span, applet, object, iframe, strong,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -42,10 +46,6 @@ body {
 
 a {
   cursor: pointer;
-  transition: all 0.3s ease-in 0s;
-}
-a:hover {
-  color: red;
 }
 
 ul {
@@ -66,20 +66,17 @@ h2 {
   margin-bottom: 240px;
 }
 
-header {
-  background-color: #ffffff;
+.btn {
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 64px;
+  font-size: 24px;
 }
-header h1 {
-  padding: 15px 0 0 20px;
-}
-header li {
-  height: 30px;
-  line-height: 30px;
-}
-header a {
+
+.underline {
   position: relative;
 }
-header a::after {
+.underline::after {
   position: absolute;
   left: 0;
   content: "";
@@ -92,11 +89,22 @@ header a::after {
   transform-origin: left top;
   transition: 0.3s;
 }
-header a:hover {
+.underline:hover {
   color: rgb(216, 157, 47);
 }
-header a:hover::after {
+.underline:hover::after {
   transform: scale(1, 1);
+}
+
+header {
+  background-color: #ffffff;
+}
+header h1 {
+  padding: 15px 0 0 20px;
+}
+header li {
+  height: 30px;
+  line-height: 30px;
 }
 
 .menuBar {
@@ -155,12 +163,20 @@ header a:hover::after {
 }
 .mv .reserveBtn {
   position: absolute;
-  right: -32px;
-  top: 280px;
+  right: -15px;
+  top: 320px;
   font-size: 1.1rem;
   transform: rotate(-90deg);
   display: block;
   letter-spacing: 0.4rem;
+}
+.mv .reserveBtn .bigger {
+  display: inline-block;
+  transition: all 1.2s ease 0s;
+  text-decoration: none;
+}
+.mv .reserveBtn .bigger:hover {
+  transform: scale(1.2);
 }
 
 main h2 {
