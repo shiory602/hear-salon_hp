@@ -16,12 +16,11 @@ ul {
   list-style-type: none;
 }
 
-img {
-  max-width: 100%;
-}
-
 h2 {
   margin-bottom: 48px;
+}
+
+.uppercase {
   text-transform: uppercase;
 }
 
@@ -29,14 +28,8 @@ h2 {
   margin-bottom: 240px;
 }
 
-.btn {
-  width: 100%;
-  margin: 0 auto;
-  margin-top: 64px;
-  font-size: 24px;
-}
-
 .underline {
+  display: inline-block;
   position: relative;
 }
 .underline::after {
@@ -57,4 +50,11 @@ h2 {
 }
 .underline:hover::after {
   transform: scale(1, 1);
+}
+
+.btn {
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 64px;
+  font-size: 24px;
 }/*# sourceMappingURL=base.css.map */

@@ -96,6 +96,9 @@ main h2 {
   .img {
     width: 48%;
     max-width: 39rem;
+    img {
+      max-width: 100%;
+    }
   }
   .txt {
     width: 52%;
@@ -106,11 +109,65 @@ main h2 {
     }
   }
 }
+// style section ///////////////////
 .styleSec {
   padding: 120px 0;
   background-color: $dark-gray;
+  img {
+    max-width: 100%;
+  }
   ul {
     width: 70vw;
     margin: 0 auto;
+  }
+  li {
+    padding: 5px 6px;
+  }
+}
+// staff section ///////////////////
+.staffSec {
+  a {
+    display: block;
+    width: 100%;
+  }
+  .fl {
+    width: 80%;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    gap: 56px;
+    justify-content: center;
+    .fw {
+      width: 250px;
+      img {
+        width: 100%;
+      }
+    }
+  }
+  .staff ul {
+    width: 100%;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 16px;
+  }
+  .bi-instagram {
+    font-size: 42px;
+    opacity: .6;
+    &:hover {
+      opacity: .4;
+    }
+  }
+}
+// price section ///////////////////
+.priceSec {
+  .list dl {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    dt, dd {
+      width: 40%;
+    }
+    p {
+      width: 30%;
+    }
   }
 }
