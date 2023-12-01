@@ -111,8 +111,8 @@ main h2 {
 }
 // style section ///////////////////
 .styleSec {
-  padding: 120px 0;
   background-color: $dark-gray;
+  padding: 120px 0;
   img {
     max-width: 100%;
   }
@@ -126,6 +126,7 @@ main h2 {
 }
 // staff section ///////////////////
 .staffSec {
+  padding: 120px 0;
   a {
     display: block;
     width: 100%;
@@ -159,15 +160,70 @@ main h2 {
 }
 // price section ///////////////////
 .priceSec {
-  .list dl {
+  margin: 0;
+  background-color: $dark-gray;
+  padding: 120px 0;
+  .fl-list {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    dt, dd {
+    justify-content: center;
+    align-items: center;
+    .list {
       width: 40%;
+      dl {
+        display: flex;
+        width: 360px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        text-align: center;
+        margin-bottom: 20px;
+        border-bottom: 1px solid $color-line;
+        dt, dd {
+          width: 40%;
+        }
+        p {
+          padding: 0 5px;
+        }
+      }
     }
-    p {
-      width: 30%;
+  }
+  img {
+    max-width: 500px;
+  }
+}
+.blogSec {
+  padding: 160px 0;
+  background-color: $dark-gray;
+  ul {
+    background-color: $white;
+    display: flex;
+    width: 60%;
+    margin: 0 auto;
+    padding: 56px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    li {
+      width: 100%;
+      border-bottom: 1px solid $color-line;
+      dl {
+        display: flex;
+        width: 360px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        text-align: center;
+        dt, dd {
+          width: 40%;
+        }
+        p {
+          padding: 0 5px;
+        }
+      }
     }
+  }
+}
+footer {
+  img {
+    max-width: 100%;
   }
 }
