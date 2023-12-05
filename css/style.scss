@@ -68,10 +68,10 @@ header {
   // カルーセル終了 ///////////////////
   .reserveBtn {
     position: absolute;
-    right: -15px;
+    right: -36px;
     top: 320px;
     font-size: 1.1rem;
-    transform: rotate(-90deg);
+    transform: rotate(90deg);
     display: block;
     letter-spacing: .4rem;
     .bigger {
@@ -141,6 +141,12 @@ main h2 {
       width: 250px;
       img {
         width: 100%;
+        // display: inline-block;
+        // transition: all 1.2s ease 0s;
+        // text-decoration: none;
+        // &:hover {
+        //   transform: scale(.6);
+        // }
       }
     }
   }
@@ -224,6 +230,7 @@ main h2 {
   }
 }
 footer {
+  position: relative;
   text-align: center;
   background-color: $color-primary;
   color: $white;
@@ -245,36 +252,40 @@ footer {
     font-size: 10px;
   }
 }
+/*このクラスが付与されると表示する*/
+.absolute{
+  position: absolute;
+  top: -70px;
+  bottom: auto;
+}
 // scrolling up ////////////////////
-.pagetop {
+.pageTop {
   position: fixed;
   right: 1rem;
-  bottom: 5rem;
-  z-index: 99;
-  a {
-    position: relative;
-    display: block;
-    width: 50px;
-    height: 50px;
-    text-decoration: none;
-    ::before {
+  bottom: 3rem;
+  display: block;
+  width: 100px;
+  height: 50px;
+  font-size: .7rem;
+  color: $color-primary;
+  letter-spacing: .2rem;
+  text-decoration: none;
+  transform: rotate(90deg);
+  transition: .6s;
+  // デフォルトで非表示にする
+  opacity: 0;
+  visibility: hidden;
+
+  span::before {
       font-family: 'Font Awesome 5 Free';
-      font-weight: 900;
-      content: '\f106';
-      font-size: 25px;
-      color: $dark-gray;
-      position: absolute;
-      width: 25px;
-      height: 25px;
-      top: 0;
-      bottom: 0;
-      right: 0;
-      left: 0;
-      margin: auto;
-      text-align: center;
-    }
-    .m {
-      transform: rotate(90deg);
-    }
+      font-weight: 700;
+      content: '\f104';
+      margin-right: 0.5rem;
+      transform: rotate(180deg) scale(0.9);
   }
+}
+// このクラスがつくと表示する
+.active {
+  opacity: 1;
+  visibility: visible;
 }

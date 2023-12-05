@@ -97,7 +97,7 @@ h2 {
 }
 
 .s-space {
-  padding: 12px;
+  padding: 20px;
 }
 
 header {
@@ -167,10 +167,10 @@ header li {
 }
 .mv .reserveBtn {
   position: absolute;
-  right: -15px;
+  right: -36px;
   top: 320px;
   font-size: 1.1rem;
-  transform: rotate(-90deg);
+  transform: rotate(90deg);
   display: block;
   letter-spacing: 0.4rem;
 }
@@ -325,6 +325,7 @@ main h2 {
 }
 
 footer {
+  position: relative;
   text-align: center;
   background-color: #333333;
   color: #fff;
@@ -347,35 +348,38 @@ footer .copyright {
   font-size: 10px;
 }
 
-.pagetop {
+/*このクラスが付与されると表示する*/
+.absolute {
+  position: absolute;
+  top: -70px;
+  bottom: auto;
+}
+
+.pageTop {
   position: fixed;
   right: 1rem;
-  bottom: 5rem;
-  z-index: 99;
-}
-.pagetop a {
-  position: relative;
+  bottom: 3rem;
   display: block;
-  width: 50px;
+  width: 100px;
   height: 50px;
+  font-size: 0.7rem;
+  color: #333333;
+  letter-spacing: 0.2rem;
   text-decoration: none;
-}
-.pagetop a ::before {
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  content: "\f106";
-  font-size: 25px;
-  color: #f5f5f5;
-  position: absolute;
-  width: 25px;
-  height: 25px;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  margin: auto;
-  text-align: center;
-}
-.pagetop a .m {
   transform: rotate(90deg);
+  transition: 0.6s;
+  opacity: 0;
+  visibility: hidden;
+}
+.pageTop span::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 700;
+  content: "\f104";
+  margin-right: 0.5rem;
+  transform: rotate(180deg) scale(0.9);
+}
+
+.active {
+  opacity: 1;
+  visibility: visible;
 }/*# sourceMappingURL=style.css.map */
