@@ -1,5 +1,7 @@
 @import 'color';
-@import "mixin";
+html {
+  scroll-behavior: smooth; // ゆっくりスクロールする
+}
 body {
   font-family: "Lato", sans-serif;
   font-weight: 300;
