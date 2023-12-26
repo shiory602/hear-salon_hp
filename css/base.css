@@ -31,6 +31,11 @@ h2 {
 .space {
   margin-bottom: 160px;
 }
+@media screen and (max-width: 480px) {
+  .space {
+    margin-bottom: 90px;
+  }
+}
 
 .underline {
   display: inline-block;

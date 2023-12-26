@@ -46,71 +46,88 @@ header {
 /////////////////////
 ///// mobile menu ///
 /////////////////////
-// mark
-.nav_toggle {
-  display: block;
-  position: relative;
-  width: 1.75rem;
-  height: 1.5rem;
-  margin-right: 10px;
-  z-index: 2;
-  i {
+/* PCでは非表示にしておく */
+.nav_toggle,
+.nav {
+  display: none;
+}
+/* スマホサイズで見た場合のスタイル */
+@media screen and (max-width: 480px) {
+  .menuBar {
+    display: none;
+  }
+  // mark
+  .nav_toggle {
     display: block;
-    width: 100%;
-    height: 2px;
-    background-color: $color-primary;
     position: absolute;
-    transition: transform 0.5s, opacity 0.5s;
-    &:nth-child(1) {
-      top: 0;
-    }
-    &:nth-child(2) {
-      top: 0;
-      bottom: 0;
-      margin: auto;
-    }
-    &:nth-child(3) {
-      bottom: 0;
+    top: 20px;
+    right: 0;
+    width: 1.75rem;
+    height: 1.5rem;
+    margin-right: 10px;
+    z-index: 100;
+    i {
+      display: block;
+      width: 100%;
+      height: 2px;
+      background-color: $color-primary;
+      position: absolute;
+      transition: transform 0.5s, opacity 0.5s;
+      &:nth-child(1) {
+        top: 0;
+      }
+      &:nth-child(2) {
+        top: 0;
+        bottom: 0;
+        margin: auto;
+      }
+      &:nth-child(3) {
+        bottom: 0;
+      }
     }
   }
-}
-// mb menu after
-.nav_toggle.show i:nth-child(1) {
-  transform: translateY(10px) rotate(-45deg);
-}
-.nav_toggle.show i:nth-child(2) {
-  opacity: 0;
-}
-.nav_toggle.show i:nth-child(3) {
-  transform: translateY(-12px) rotate(45deg);
-}
-// before
-.nav {
-  display: flex;
-  position: fixed;
-  align-items: center;
-  justify-content: center;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.5s, visibility 0.5s;
-  background-color: $white;
-  z-index: 1;
-}
-.nav_menu_li {
-  margin-bottom: 30px;
-}
-.nav_menu_li a {
-  color: $warning;
-  text-decoration: none;
-}
-// after click
-.nav.show {
-  opacity: 1;
-  visibility: visible;
+  // mb menu after
+  .nav_toggle.show i:nth-child(1) {
+    transform: translateY(10px) rotate(-45deg);
+  }
+  .nav_toggle.show i:nth-child(2) {
+    opacity: 0;
+  }
+  .nav_toggle.show i:nth-child(3) {
+    transform: translateY(-12px) rotate(45deg);
+  }
+  // before
+  .nav {
+    display: flex;
+    position: fixed;
+    align-items: center;
+    justify-content: space-around;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s, visibility 0.5s;
+    text-align: center;
+    background-color: $white;
+    z-index: 99;
+  }
+  .nav_menu_ul {
+    flex-direction: column;
+  }
+  .nav_menu_li {
+    margin-bottom: 30px;
+  }
+  .nav_menu_li a {
+    color: $color-primary;
+    text-decoration: none;
+  }
+  // after click
+  .nav.show {
+    opacity: 1;
+    visibility: visible;
+  }
 }
 ///////////////////
 /// カルーセル /////
@@ -118,11 +135,18 @@ header {
 .mv {
   height: 640px;
   margin-top: 64px;
+  @media screen and (max-width: 480px) {
+    height: 210px;
+  }
   // カルーセル開始 ///////////////////
   #slideshow {
     position: relative;
     width:  90vw; /* 画像の横幅に合わせて記述 */
     height: 468px; /* 画像の高さに合わせて記述 */
+    @media screen and (max-width: 480px) {
+      width: 100vw;
+      height: 210px;
+    }
   }
   #slideshow img {
     width: 100%;
@@ -157,12 +181,18 @@ header {
         transform: scale(1.2);
       }
     }
+    @media screen and (max-width: 480px) {
+      display: none;
+    }
   }
 }
 // concept section ///////////////////
 main h2 {
   text-align: center;
   font-size: 32px;
+  @media screen and (max-width: 480px) {
+    font-size: 18px;
+  }
 }
 .conceptSec {
   display: flex;
@@ -269,6 +299,9 @@ main h2 {
   }
   img {
     max-width: 500px;
+    @media screen and (max-width: 480px) {
+      max-width: 100%;
+    }
   }
 }
 .blogSec {
@@ -285,6 +318,9 @@ main h2 {
     justify-content: center;
     align-items: center;
     gap: 20px;
+    @media screen and (max-width: 480px) {
+      width: 100%;
+    }
     li {
       width: 100%;
       border-bottom: 1px solid $color-line;
@@ -294,6 +330,9 @@ main h2 {
         flex-wrap: wrap;
         justify-content: space-between;
         text-align: center;
+        @media screen and (max-width: 480px) {
+          width: 100%;
+        }
         dt, dd {
           width: 40%;
         }

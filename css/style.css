@@ -64,6 +64,11 @@ h2 {
 .space {
   margin-bottom: 160px;
 }
+@media screen and (max-width: 480px) {
+  .space {
+    margin-bottom: 90px;
+  }
+}
 
 .underline {
   display: inline-block;
@@ -142,84 +147,105 @@ header li {
   content: "";
 }
 
-.nav_toggle {
-  display: block;
-  position: relative;
-  width: 1.75rem;
-  height: 1.5rem;
-  margin-right: 10px;
-  z-index: 2;
-}
-.nav_toggle i {
-  display: block;
-  width: 100%;
-  height: 2px;
-  background-color: #333333;
-  position: absolute;
-  transition: transform 0.5s, opacity 0.5s;
-}
-.nav_toggle i:nth-child(1) {
-  top: 0;
-}
-.nav_toggle i:nth-child(2) {
-  top: 0;
-  bottom: 0;
-  margin: auto;
-}
-.nav_toggle i:nth-child(3) {
-  bottom: 0;
-}
-
-.nav_toggle.show i:nth-child(1) {
-  transform: translateY(10px) rotate(-45deg);
-}
-
-.nav_toggle.show i:nth-child(2) {
-  opacity: 0;
-}
-
-.nav_toggle.show i:nth-child(3) {
-  transform: translateY(-12px) rotate(45deg);
-}
-
+/* PCでは非表示にしておく */
+.nav_toggle,
 .nav {
-  display: flex;
-  position: fixed;
-  align-items: center;
-  justify-content: center;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.5s, visibility 0.5s;
-  background-color: #fff;
-  z-index: 1;
+  display: none;
 }
 
-.nav_menu_li {
-  margin-bottom: 30px;
+/* スマホサイズで見た場合のスタイル */
+@media screen and (max-width: 480px) {
+  .menuBar {
+    display: none;
+  }
+  .nav_toggle {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 0;
+    width: 1.75rem;
+    height: 1.5rem;
+    margin-right: 10px;
+    z-index: 100;
+  }
+  .nav_toggle i {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #333333;
+    position: absolute;
+    transition: transform 0.5s, opacity 0.5s;
+  }
+  .nav_toggle i:nth-child(1) {
+    top: 0;
+  }
+  .nav_toggle i:nth-child(2) {
+    top: 0;
+    bottom: 0;
+    margin: auto;
+  }
+  .nav_toggle i:nth-child(3) {
+    bottom: 0;
+  }
+  .nav_toggle.show i:nth-child(1) {
+    transform: translateY(10px) rotate(-45deg);
+  }
+  .nav_toggle.show i:nth-child(2) {
+    opacity: 0;
+  }
+  .nav_toggle.show i:nth-child(3) {
+    transform: translateY(-12px) rotate(45deg);
+  }
+  .nav {
+    display: flex;
+    position: fixed;
+    align-items: center;
+    justify-content: space-around;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s, visibility 0.5s;
+    text-align: center;
+    background-color: #fff;
+    z-index: 99;
+  }
+  .nav_menu_ul {
+    flex-direction: column;
+  }
+  .nav_menu_li {
+    margin-bottom: 30px;
+  }
+  .nav_menu_li a {
+    color: #333333;
+    text-decoration: none;
+  }
+  .nav.show {
+    opacity: 1;
+    visibility: visible;
+  }
 }
-
-.nav_menu_li a {
-  color: #ed001c;
-  text-decoration: none;
-}
-
-.nav.show {
-  opacity: 1;
-  visibility: visible;
-}
-
 .mv {
   height: 640px;
   margin-top: 64px;
+}
+@media screen and (max-width: 480px) {
+  .mv {
+    height: 210px;
+  }
 }
 .mv #slideshow {
   position: relative;
   width: 90vw; /* 画像の横幅に合わせて記述 */
   height: 468px; /* 画像の高さに合わせて記述 */
+}
+@media screen and (max-width: 480px) {
+  .mv #slideshow {
+    width: 100vw;
+    height: 210px;
+  }
 }
 .mv #slideshow img {
   width: 100%;
@@ -254,10 +280,20 @@ header li {
 .mv .reserveBtn .bigger:hover {
   transform: scale(1.2);
 }
+@media screen and (max-width: 480px) {
+  .mv .reserveBtn {
+    display: none;
+  }
+}
 
 main h2 {
   text-align: center;
   font-size: 32px;
+}
+@media screen and (max-width: 480px) {
+  main h2 {
+    font-size: 18px;
+  }
 }
 
 .conceptSec {
@@ -361,6 +397,11 @@ main h2 {
 .priceSec img {
   max-width: 500px;
 }
+@media screen and (max-width: 480px) {
+  .priceSec img {
+    max-width: 100%;
+  }
+}
 
 .blogSec {
   margin-bottom: 0;
@@ -378,6 +419,11 @@ main h2 {
   align-items: center;
   gap: 20px;
 }
+@media screen and (max-width: 480px) {
+  .blogSec ul {
+    width: 100%;
+  }
+}
 .blogSec ul li {
   width: 100%;
   border-bottom: 1px solid #e6e6e6;
@@ -388,6 +434,11 @@ main h2 {
   flex-wrap: wrap;
   justify-content: space-between;
   text-align: center;
+}
+@media screen and (max-width: 480px) {
+  .blogSec ul li dl {
+    width: 100%;
+  }
 }
 .blogSec ul li dl dt, .blogSec ul li dl dd {
   width: 40%;

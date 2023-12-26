@@ -2,23 +2,12 @@
 /* ハンバーガーmenu */
 ////////////////////
 // 追従ナビ・スマホでハンバーガーメニューになる
-(function($) {
-  $(function() {
-      var $header = $('#head_wrap');
-      // Nav Fixed
-      $(window).scroll(function() {
-          if ($(window).scrollTop() > 350) {
-              $header.addClass('fixed');
-          } else {
-              $header.removeClass('fixed');
-          }
-      });
-      // Nav Toggle Button
-      $('#nav-toggle, #global-nav ul li a').click(function(){
-          $header.toggleClass('open');
-      });
-  });
-})(jQuery);
+$(".nav_toggle").on("click", function () {
+  $(".nav_toggle, .nav").toggleClass("show");
+});
+$(".nav_menu_li").on("click", function () {
+  $(".nav_toggle, .nav").toggleClass("show");
+});
 
 // ゆっくりスクロールする
 // $(function(){
